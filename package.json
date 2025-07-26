@@ -1,6 +1,6 @@
 {
   "name": "svelte-clientside",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Svelte 5 component wrapper that prevents server-side rendering for client-only components",
   "main": "dist/index.js",
   "svelte": "./dist/index.js",
@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/kitecaptain/svelte-clientside#readme",
   "peerDependencies": {
-    "@sveltejs/kit": "^2.26.1",
+    "@sveltejs/kit": "^2.25.0",
     "svelte": "^5.0.0"
   },
   "devDependencies": {
