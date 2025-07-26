@@ -36,7 +36,7 @@
     "wrapper",
     "client-only"
   ],
-  "author": "Kite Eugine <dev@kiteeugine.com>",
+  "author": "Kite Captain",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/kitecaptain/svelte-clientside#readme",
   "peerDependencies": {
+    "@sveltejs/kit": "^2.26.1",
     "svelte": "^5.0.0"
   },
   "devDependencies": {
