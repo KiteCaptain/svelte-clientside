@@ -1,0 +1,57 @@
+{
+  "name": "svelte-clientside",
+  "version": "0.0.1",
+  "description": "A Svelte 5 component wrapper that prevents server-side rendering for client-only components",
+  "main": "dist/index.js",
+  "svelte": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "svelte-package",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "svelte",
+    "svelte5",
+    "sveltekit",
+    "client-side",
+    "ssr",
+    "no-ssr",
+    "client component",
+    "wrapper",
+    "client-only"
+  ],
+  "author": "Kite Eugine <dev@kiteeugine.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitecaptain/svelte-clientside.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kitecaptain/svelte-clientside/issues"
+  },
+  "homepage": "https://github.com/kitecaptain/svelte-clientside#readme",
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.4.0",
+    "svelte": "^5.36.17",
+    "typescript": "^5.8.3"
+  }
+}
