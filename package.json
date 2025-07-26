@@ -1,6 +1,6 @@
 {
   "name": "svelte-clientside",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Svelte 5 component wrapper that prevents server-side rendering for client-only components",
   "main": "dist/index.js",
   "svelte": "./dist/index.js",
