@@ -33,7 +33,20 @@ jobs:
           # Extract version from release tag (removes 'v' prefix if present)
           VERSION=${GITHUB_REF#refs/tags/}
           VERSION=${VERSION#v}
-          npm version $VERSION --no-git-tag-version
+          
+          # Get current version from package.json
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          
+          echo "Release tag version: $VERSION"
+          echo "Current package.json version: $CURRENT_VERSION"
+          
+          # Only update if versions are different
+          if [ "$VERSION" != "$CURRENT_VERSION" ]; then
+            echo "Updating version from $CURRENT_VERSION to $VERSION"
+            npm version $VERSION --no-git-tag-version
+          else
+            echo "Version already matches release tag, skipping version update"
+          fi
       
       - run: npm publish
         env:
